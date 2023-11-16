@@ -1,0 +1,28 @@
+import React, {useContext} from 'react'
+import LoginContext from '../Context/LoginContext'
+import { Link } from "react-router-dom";
+import zeroToOne from '../images/0-1years.webp'
+import oneToTwo from '../images/1-2years.jpg'
+import twoToThree from '../images/2-4years.webp'
+import fourPlus from '../images/4+years.jpg'
+import separator from '../images/separator.webp'
+
+const ShopByAge = () => {
+  const ContextValue = useContext(LoginContext);
+  return (
+    <div className='shop-by-age-container'>
+     <h2>Shop By Age</h2>
+     <span>Choose Products according to Age of Kid</span>
+     <div className='separator-image'></div>
+     <div className='age-image-container d-flex flex-row justify-content-around'>
+        <Link to='categories'><div className='each-img-block' onClick={()=>ContextValue.updateAge("0-1")}><img src={zeroToOne}></img></div></Link>
+        <Link to='categories'><div className='each-img-block' onClick={()=>ContextValue.updateAge("1-2")}><img src={oneToTwo}></img></div></Link>
+        <Link to='categories'><div className='each-img-block' onClick={()=>ContextValue.updateAge("2-4")}><img src={twoToThree}></img></div></Link>
+        <Link to='categories'><div className='each-img-block' onClick={()=>ContextValue.updateAge("4+")}><img src={fourPlus}></img></div></Link>
+
+     </div>
+    </div>
+  )
+}
+
+export default ShopByAge

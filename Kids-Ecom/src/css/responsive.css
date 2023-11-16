@@ -1,0 +1,430 @@
+@media screen and (max-width:900px){
+
+    /*---------- Header component css-------------*/
+
+
+    .quick-view-row{
+        margin-top: 50%;
+    }
+
+    .quick-view-image-section{
+        width: 115px;
+    }
+
+    .quick-view-image-section img{
+        width: 100%;
+    }
+
+    .star-2{
+        font-size: 12px;
+    }
+
+    .quick-view-row h3{
+        font-size: 14px;
+    }
+
+    .product-name{
+        font-size: 14px;
+        padding: 14px;
+    }
+
+    .cross-quick-view{
+        height: 10px;
+        right: 5px;
+    }
+
+    .fa{
+        font-size: 10px;
+    }
+
+    .y-gap{
+        justify-content: space-between;
+    }
+
+    .order-total{
+        margin-top: 50px;
+    }
+
+    .product-table td{
+        padding: 0;
+        font-size: 12px;
+    }
+
+    .search_section{
+        padding: 0;
+        height: auto;
+    }
+
+    .brand-type{
+        font-size: 12px;
+        column-gap: 8px;
+    }
+
+    .filter-content-section li{
+        font-size: 14px;
+    }
+
+    .product-image-container{
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+    }
+
+    .text-container{
+        overflow: auto !important;
+        height: auto !important;
+    }
+
+    .you-may-also-like{
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 10px;
+    }
+
+    .filter-container h2{
+        font-size: 16px;
+        
+    }
+
+    .filter-container
+    {
+        top: 195px;
+    }
+
+    .filter-text{
+        display: none;
+    }
+
+    .filter-container{
+        width: fit-content !important;
+    }
+
+    .text-section{
+        width: 130px;
+    }
+
+    .size-container{
+        padding: 10px;
+    }
+
+    .header-container img {
+        height: 50px;
+    }
+
+    .search_input_div_input{
+        display: none;
+    }
+
+    .image-add-to-cart-conatiner{
+        padding: 10px;
+    }
+
+    .Product-list-card-container .card{
+        width: 42vw;
+    }
+
+    .search_input_div{
+        background-color: transparent;
+    }
+
+    .categories{
+        flex-direction: column;
+        row-gap: 20px;
+        padding: 20px;
+        height: auto;
+        margin-top: 40px;
+        
+    }
+
+
+    .search-input{
+        border: none;
+        padding: 0;
+    }
+
+    .account-cart-container span{
+        display: none;
+    }
+
+    .dropdown-product-list{
+        width: 100%;
+        left: 0;
+        top: 40px;
+        margin-top: 0;
+        height: 100%;
+    }
+
+    .categories-container{
+        display: none;
+        transition-property: display;
+        transition-duration: 3s;
+        position: absolute;
+        z-index: 2;
+        background: white;
+        width: 90vw;
+    }
+
+    .hamburger-container{
+        display: block;
+    }
+
+    .header-container{
+        padding: 10px;
+    }
+
+    .cross{
+        display: block;
+    }
+
+    .icon{
+        display: block !important;
+    }
+
+    /* ---- shop by age ------- */
+    
+        
+    
+
+    /* -------- Category component style-------------- */
+
+    .Category-container img{
+        width: 100%;
+    }
+
+    .Category-container{
+     display: flex;
+     flex-direction: column;
+    }
+
+    .shop-by-Category-container{
+                display: grid;
+                grid-template-columns: 40% 40%;
+                justify-content: center;
+                row-gap: 20px;
+                column-gap: 20px;
+    }
+
+    .shop-by-Category-container div{
+        border-radius: 0;
+    }
+
+    /* .accessories{
+        color: white;
+        background: linear-gradient(#e36ba2,#d8327c) !important;
+    }
+
+    .toys{
+        color: white;
+        background: linear-gradient(#5f4e85,#331277) !important;
+    }
+
+    .diapers{
+        color: white;
+        background:   linear-gradient(#7dbb44,#57951e) !important;
+    }
+    .jacket{
+        color: white;
+        background:  linear-gradient(#71dcc9,#19a78f) !important;
+    }
+
+    .stroller{
+        color: white;
+        background:  linear-gradient(#ed782f,#ad5a28) !important;
+        
+    }
+    .cot{
+        background: linear-gradient(#f3bc5b,#b57d1c) !important;
+        color: white;
+    } */
+
+    /* ------ Bestseller components -------*/
+
+    .col-md-4 {
+        width: 50%;
+    }
+
+    .add-to-cart-dropdown-container{
+        left: auto;
+        bottom: 0;
+        right: 5px;
+        margin-top: 0;
+        top: auto;
+    }
+
+    .quick-view-product-container{
+        top: 0;
+    }
+
+    .bestseller-col-lg-7{
+        width: auto;
+        
+      }
+    
+      .bestseller-col-lg-5{
+        width:auto;
+        
+      }
+
+    .quick-add-to-btn{
+      background-color: black !important;
+      color: white !important;
+      width: 100%;
+    }
+
+    .quick-add-to-btn:active{
+        background-color: white !important;
+        color: black !important;
+    }
+
+    /* -------- Review Container------- */
+
+
+
+    .custom-card{
+        min-width: 75vw;
+    }
+
+    /* ---------Product components style-------- */
+
+    .product{
+        grid-template-columns: none;
+    }
+
+    .filter-container{
+        position: absolute;
+        z-index: 2;
+        background: white;
+        width: 90vw;
+        display: none;
+    }
+
+
+    /* ------- filter-product components style-------- */
+
+    .filter-text-container{
+                display: flex;
+    }
+
+    .Active{
+        
+        grid-template-columns: 45vw 45vw; 
+        justify-content: space-around; 
+        column-gap: 0px;
+        width: 100vw;
+       
+    }
+
+    .custom-card{
+        width: 80vw;
+    }
+
+    .product-card{
+        padding: 5px;
+    }
+
+    .product-details span{
+        width:150px;
+    }
+
+    .text-section img{
+        display: none;
+    }
+
+    /* ------- Product Cart components style ------- */
+    .Car{
+        grid-template-columns: 45vw 45vw;
+    }
+
+    .product-item span{
+        font-size: 12px;
+    }
+
+   
+}
+
+
+@media screen and (min-width:651px) and (max-width:900px){
+    .review-card-container{
+        width:75vw
+    }
+
+    .custom-card{
+        width: 80vw;
+    }
+    
+}
+
+@media screen and (max-width:650px){
+    .review-card-container{
+    width: 75vw;
+    }
+
+    .card-text{
+        font-size: 12px;
+    }
+
+    .review-section{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .star-group{
+        justify-content: center;
+    }
+
+    .add-to-cart-dropdown-container{
+        font-size: 14px;
+    }
+
+    .card-title{
+        font-size: 12px;
+    }
+    .age-image-container{
+        flex-direction: column !important;
+        row-gap: 20px;
+    }
+
+     /* ----- Parenting component------ */
+     .blog-card{
+        width:auto;
+    }
+
+    .blog-container{
+        flex-direction: column;
+        padding: 10px;
+    }
+}
+
+@media screen and (min-width:651px) and (max-width:1064px){
+    .age-image-container{
+        display: grid !important;
+        grid-template-columns: 40% 40%;
+        row-gap: 20px;
+    }
+}
+
+@media screen and (max-width:650px){
+    .card-title{
+        height: 50px;
+        font-size: 10px;
+    }
+
+    .quick-add-to-btn{
+        padding: 3px;
+        font-size: 12px;
+    }
+
+    .product-detail-container{
+        width: auto;
+        margin: 0;
+    }
+
+
+
+    .share-thumb{
+        font-size: 12px;
+    }
+    .review-section{
+        font-size: 12px;
+    }
+}
