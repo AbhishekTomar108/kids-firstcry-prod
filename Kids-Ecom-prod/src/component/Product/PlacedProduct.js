@@ -8,13 +8,12 @@ const PlacedProduct = () => {
     useEffect(()=>{
         fetchUserSavedProduct()
     },[])
-
+ 
 
     const fetchUserSavedProduct  =async()=>{
         try
        { const response = await fetch("http://localhost:5000/api/product/fetchalluserplacedproduct", {
-            method: 'GET', 
-            
+            method: 'GET',            
             headers: {
               'Content-Type': 'application/json',
               'auth-token': localStorage.getItem('KidsCommerce')
@@ -58,6 +57,7 @@ const PlacedProduct = () => {
       }
 
   return (
+   
     <div className='product-placed-container'>
         <div className="col-lg-8 col-sm table-responsive mb-5 product-placed-table">
             <table className="table table-light table-borderless table-hover text-center mb-0 product-table">

@@ -15,10 +15,11 @@ const ShopByAge = () => {
      <span>Choose Products according to Age of Kid</span>
      <div className='separator-image'></div>
      <div className='age-image-container d-flex flex-row justify-content-around'>
+      
         <Link to='categories'><div className='each-img-block' onClick={()=>ContextValue.updateAge("0-1")}><img src={zeroToOne}></img></div></Link>
-        <Link to='categories'><div className='each-img-block' onClick={()=>ContextValue.updateAge("1-2")}><img src={oneToTwo}></img></div></Link>
-        <Link to='categories'><div className='each-img-block' onClick={()=>ContextValue.updateAge("2-4")}><img src={twoToThree}></img></div></Link>
-        <Link to='categories'><div className='each-img-block' onClick={()=>ContextValue.updateAge("4+")}><img src={fourPlus}></img></div></Link>
+        <Link to='categories'><div className='each-img-block' onClick={()=>ContextValue.updateAge("2-1")}><img src={oneToTwo}></img></div></Link>
+        <Link to='categories'><div className='each-img-block' onClick={()=>ContextValue.updateAge("2-3")}><img src={twoToThree}></img></div></Link>
+        <Link to='categories'><div className='each-img-block' onClick={()=>ContextValue.updateAge("3-4")}><img src={fourPlus}></img></div></Link>
 
      </div>
     </div>

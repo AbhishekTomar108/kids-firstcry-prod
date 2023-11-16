@@ -1001,6 +1001,11 @@ justify-content: center;
 
 .filter-content-section li{
     cursor: pointer;
+    width: fit-content;
+    background: #f9cf1c;
+    color: white;
+    padding: 10px;
+    border-radius: 2px;
 }
 .filter-content-section li:hover{
     color: black;

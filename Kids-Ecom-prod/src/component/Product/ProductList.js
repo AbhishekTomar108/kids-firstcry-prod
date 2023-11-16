@@ -362,7 +362,7 @@ export default function ProductList(props) {
         </div>
 
         <div className="text">
-          <h1 style={{ fontSize: "30px" }}>{ContextValue.productname==="all"?"Gifts For All Ages":ContextValue.productname} Collection</h1>
+          <h1 style={{ fontSize: "30px" }}>{ContextValue.productname==="all"?"Gifts For All Ages":ContextValue.productname==="Used Breast Pump"?"Breast Pump":ContextValue.productname} Collection</h1>
           <hr></hr>
 
           <p style={{ textAlign: "center" }}>

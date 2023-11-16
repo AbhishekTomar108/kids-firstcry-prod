@@ -28,18 +28,16 @@ const Product = (props) => {
       console.log('parse data =',parsedData)
     }
     else{
-  let filterdata  =parsedData.filter(data=>{
+  let filterdata  = parsedData.filter(data=>{
     return (data.product===ContextValue.productname)
   })
   setproductdetails(filterdata);
   setprouctTitle(filterdata[0].title)
   setprouctTitleDesc(filterdata[0].description)
 }
-
-  
-
-  
+ 
   }
+  
   return (
     <div className='product'>
         <Filter/>

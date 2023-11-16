@@ -22,12 +22,9 @@ const Header = () => {
     fetch(`https://commerce-backend-test.onrender.com/api/product/products/`).then(res=>res.json()).then(data=> {const filteredDtata = data.filter(element=>{ return (element.productname.toLowerCase().includes(searchitem,0) || element.category.toLowerCase().includes(searchitem,0))})
     
     setfilterData(filteredDtata)
-    localStorage.setItem('filterproductData', JSON.stringify(filteredDtata));
-       
+    localStorage.setItem('filterproductData', JSON.stringify(filteredDtata));       
   
 })
-
-
    }
 
     },[ContextValue.productname, searchitem])
@@ -193,7 +190,7 @@ const Header = () => {
             <div className='top-cotegories hover-product-list y-gap' onMouseOver={()=>showProduct(0) }  onClick={()=>showProductOnClick(0)} >Accessories <img src={downArrow} className='down-arrow'/>
             <div className='accesory-list-container dropdown-product-list' onMouseOver={()=>showProduct(0)}>
                <ul>
-               <Link to='categories'><li onClick={()=>ContextValue.updateproductname("Used Breast Pump")}>Used Breast Pump</li></Link>
+               <Link to='categories'><li onClick={()=>ContextValue.updateproductname("Used Breast Pump")}>Breast Pump</li></Link>
                <Link to='categories'><li onClick={()=>ContextValue.updateproductname("Baby Bed With Net")}>Baby Bed With Net</li></Link>
                <Link to='categories'><li onClick={()=>ContextValue.updateproductname("Baby Cradle Automatic Swing")}>Baby Cradle Automatic Swing</li></Link>
                <Link to='categories'><li onClick={()=>ContextValue.updateproductname("Mothertouch Walker")}>Mothertouch Walker</li></Link>
@@ -253,6 +250,7 @@ const Header = () => {
                 </div>
                 </div>
                 <div className='y-gap' onClick={()=>ContextValue.updateproductname("all")}><Link to='categories'>Gifts For All Ages</Link></div>
+                <div className='y-gap'><Link to={localStorage.getItem('userStatus')==="true"?'/placedproduct':'/account'}>Placed Product</Link></div>
             </div>
 
            

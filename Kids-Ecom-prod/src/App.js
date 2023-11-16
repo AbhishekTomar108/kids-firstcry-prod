@@ -63,7 +63,7 @@ function App() {
         <Route  exact path="/productcart" element={<ProductCart/>}/>
         <Route  exact path="/proceedtocheckout" element={<ProductCheckOut/>}/>
         <Route  exact path="/placedproduct" element={<PlacedProduct/>}/>
-        <Route  exact path="/" element={[<Banner/>, <ShopByAge/>, <ShopByCategory/>, <Bestseller/>,<Category/>,<ReadMore/>, <Press/>,<Customers/>]}/>
+        <Route  exact path="" element={[<Banner/>, <ShopByAge/>, <ShopByCategory/>, <Bestseller/>,<Category/>,<ReadMore/>, <Press/>,<Customers/>]}/>
         {/* <Route  exact path="/" element={<AddCommerceData/>}/> */}
 
        
