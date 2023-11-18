@@ -11,7 +11,7 @@ const Login = () => {
   const submitHandle = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("https://commerce-backend-test.onrender.com/api/auth/login", {
+      const response = await fetch("http://localhost:8000/api/auth/login", {
         method: 'POST',
 
         headers: {

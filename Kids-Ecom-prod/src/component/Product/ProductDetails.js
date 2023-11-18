@@ -24,7 +24,7 @@ const ProductDetails = () => {
 
   const getProductDetail = async(title)=>{
 
-    let getProduct = await fetch(`http://localhost:5000/api/product/getProductDetail/`,{
+    let getProduct = await fetch(`http://localhost:8000/api/product/getProductDetail/`,{
       method:"GET",
       headers:{"Content-Type":"application/json",
                 "title":title
@@ -65,7 +65,7 @@ const ProductDetails = () => {
     if(localStorage.getItem('userStatus')==="true"){
       console.log('you can proceed')
 
-      const response = await fetch("http://localhost:5000/api/product/addproduct", {
+      const response = await fetch("http://localhost:8000/api/product/addproduct", {
         method: 'POST', 
         
         headers: {
@@ -102,7 +102,7 @@ const ProductDetails = () => {
     event.preventDefault()
     console.log('add review =',reviewDetail)
 
-    let addReview = await fetch('http://localhost:5000/api/product/addReviews',{
+    let addReview = await fetch('http://localhost:8000/api/product/addReviews',{
       method:"POST",
       headers:{"Content-Type":"application/json"},
       body:JSON.stringify(reviewDetail)
@@ -111,7 +111,7 @@ const ProductDetails = () => {
   }
 
   const getProductReview = async()=>{
-    let getReview = await fetch(`http://localhost:5000/api/product/getProductReview/${productData._id}`,{
+    let getReview = await fetch(`http://localhost:8000/api/product/getProductReview/${productData._id}`,{
     method:"GET",
     headers:{"Content-Type":"application/json"}
   }

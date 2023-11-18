@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 
 export default function ProductCart() {
 
-  const [userProductData, setuserProductData]  = useState();
-  const [totalAmount, settotalAmount]  = useState(0);
+  const [userProductData, setuserProductData] = useState();
+  const [totalAmount, settotalAmount] = useState(0);
   const [addedItem, setaddedItem] = useState([]);
 
   useEffect(()=>{
@@ -17,7 +17,7 @@ export default function ProductCart() {
     additem[index] = additem[index]+1;
     setaddedItem(additem)
 
-    let data  = await fetch(`http://localhost:5000/api/product/updateproductcart/${userProductData[index]._id}`,
+    let data  = await fetch(`http://localhost:8000/api/product/updateproductcart/${userProductData[index]._id}`,
     {method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -43,7 +43,7 @@ const removeItem = async(index,productPrice)=>{
     setaddedItem(additem)
     console.log('added item =', additem[index])
 
-    let data  = await fetch(`https://commerce-backend-test.onrender.com/api/product/updateproductcart/${userProductData[index]._id}`,
+    let data  = await fetch(`http://localhost:8000/api/product/updateproductcart/${userProductData[index]._id}`,
     {method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -66,7 +66,7 @@ const removeItem = async(index,productPrice)=>{
 
 const removeProduct = (Index,totalPrice)=>{
 
-  fetch(`https://commerce-backend-test.onrender.com/api/product/removeproductcart/${userProductData[Index]._id}`,
+  fetch(`http://localhost:8000/api/product/removeproductcart/${userProductData[Index]._id}`,
   {method: 'POST',}
   )
   console.log('product id =',userProductData[Index]._id)
@@ -94,7 +94,7 @@ const updateTotalAmount =(productData)=>{
 
   const fetchUserSavedProduct  =async()=>{
     try
-   { const response = await fetch("https://commerce-backend-test.onrender.com/api/product/fetchalluserproduct", {
+   { const response = await fetch("http://localhost:8000/api/product/fetchalluserproduct", {
         method: 'GET', 
         
         headers: {

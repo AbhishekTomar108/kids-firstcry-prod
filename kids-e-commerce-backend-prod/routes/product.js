@@ -27,6 +27,7 @@ router.get("/products", async (req, res) => {
       console.error(error.message);
       res.status(500).send({"error":error.message});
     }
+    
   });
 
 

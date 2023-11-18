@@ -19,7 +19,7 @@ const Header = () => {
 
         
    if(searchitem!==""){
-    fetch(`https://commerce-backend-test.onrender.com/api/product/products/`).then(res=>res.json()).then(data=> {const filteredDtata = data.filter(element=>{ return (element.productname.toLowerCase().includes(searchitem,0) || element.category.toLowerCase().includes(searchitem,0))})
+    fetch(`http://localhost:8000/api/product/products/`).then(res=>res.json()).then(data=> {const filteredDtata = data.filter(element=>{ return (element.productname.toLowerCase().includes(searchitem,0) || element.category.toLowerCase().includes(searchitem,0))})
     
     setfilterData(filteredDtata)
     localStorage.setItem('filterproductData', JSON.stringify(filteredDtata));       

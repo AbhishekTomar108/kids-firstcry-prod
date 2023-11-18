@@ -68,7 +68,7 @@ export default function ProductCheckOut() {
   const checkUserAddress = async()=>{
    
     try
-    { const response = await fetch("http://localhost:5000/api/auth/checkuseraddress", {
+    { const response = await fetch("http://localhost:8000/api/auth/checkuseraddress", {
        method: 'GET', 
        
        headers: {
@@ -100,7 +100,7 @@ catch{
 
 const updateAddress = async()=>{
   console.log('address id from update=', addressId)
-  const data  = await fetch(`http://localhost:5000/api/auth/updateaddress/${addressId}`,{
+  const data  = await fetch(`http://localhost:8000/api/auth/updateaddress/${addressId}`,{
     method: 'POST', 
        
     headers: {
@@ -137,7 +137,7 @@ const handleClick = () => {
 // const paymentfunc = async()=>{
 //   console.log('payment func is running')
 
-//   const data = await fetch('http://localhost:5000/api/product/payment',{
+//   const data = await fetch('http://localhost:8000/api/product/payment',{
 //     method:"POST"
 //   })
 
@@ -275,7 +275,7 @@ const submitOrder = async(amount)=>{
 
   console.log('submit running',JSON.parse(localStorage.getItem('productCartData')))
 
-  const data = await fetch('http://localhost:5000/api/product/productcartsaved',{
+  const data = await fetch('http://localhost:8000/api/product/productcartsaved',{
     method:'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -298,7 +298,7 @@ const submitOrder = async(amount)=>{
   const submitAddress = async()=>{
     console.log('submit order data =', userDetail)
     try
-    { const response = await fetch("http://localhost:5000/api/auth/adduseraddress", {
+    { const response = await fetch("http://localhost:8000/api/auth/adduseraddress", {
        method: 'POST', 
        
        headers: {

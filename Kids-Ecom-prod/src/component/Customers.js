@@ -79,7 +79,7 @@ const Customers = () => {
     },[])
 
     const getLatestReview = async()=>{
-        let ReviewData = await fetch('http://localhost:5000/api/product/getLatestReview',{
+        let ReviewData = await fetch('http://localhost:8000/api/product/getLatestReview',{
             method:'GET',
            headers:{"Content-Type":"application/json"}
         })

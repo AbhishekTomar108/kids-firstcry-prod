@@ -23,7 +23,7 @@ const Bestseller = () => {
 
   const fetchProductData = async () => {
     const res = await fetch(
-      "https://commerce-backend-test.onrender.com/api/product/bestsellers"
+      "http://localhost:8000/api/product/bestsellers"
     );
 
     const data = await res.json();

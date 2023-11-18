@@ -12,7 +12,7 @@ const PlacedProduct = () => {
 
     const fetchUserSavedProduct  =async()=>{
         try
-       { const response = await fetch("http://localhost:5000/api/product/fetchalluserplacedproduct", {
+       { const response = await fetch("http://localhost:8000/api/product/fetchalluserplacedproduct", {
             method: 'GET',            
             headers: {
               'Content-Type': 'application/json',
@@ -84,7 +84,7 @@ const PlacedProduct = () => {
                   <td className="align-middle">
                     {data.totalItem}
                   </td>
-                  <td className="align-middle">{data.productPrice*data.totalItem}</td>
+                  <td className="align-middle">{(data.productPrice*data.totalItem).toFixed(2)}</td>
                   <td className="align-middle">{new Date(data.date).toLocaleDateString()}</td>
                   <td className="align-middle">{data.deliveryDate}</td>
                 </tr>

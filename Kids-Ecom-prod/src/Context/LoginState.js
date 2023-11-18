@@ -53,7 +53,7 @@ const LoginState = (props) => {
     }
 
     const fetchuserDetails = async()=>{
-      const response = await fetch("https://commerce-backend-test.onrender.com/api/auth/getuser", {
+      const response = await fetch("http://localhost:8000/api/auth/getuser", {
      method: 'GET', 
      
      headers: {

@@ -24,7 +24,7 @@ const AddCommerceData = () => {
     const addData = async()=>{
         console.log('data =',detail)
 
-        let addData = await fetch('http://localhost:5000/api/product/productDetail',{
+        let addData = await fetch('http://localhost:8000/api/product/productDetail',{
             method:"POST",
             headers:{"Content-Type":"application/json"},
             body:JSON.stringify(detail)

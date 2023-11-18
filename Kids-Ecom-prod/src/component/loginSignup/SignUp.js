@@ -11,7 +11,7 @@ const SignUp = () => {
     e.preventDefault();
     if (user.password === user.confirmpassword) {
       try {
-        const response = await fetch("https://commerce-backend-test.onrender.com/api/auth", {
+        const response = await fetch("http://localhost:8000/api/auth", {
           method: 'POST',
 
           headers: {
