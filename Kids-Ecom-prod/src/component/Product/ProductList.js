@@ -1,6 +1,6 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState, useContext,useRef } from "react";
 import image1 from "../../images/img-1.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import LoginContext from "../../Context/LoginContext";
 import cross from "../../images/cross.png";
 // import image2 from "./image/MusicalTruck_460x.webp";
@@ -9,6 +9,8 @@ import cross from "../../images/cross.png";
 
 export default function ProductList(props) {
   const ContextValue = useContext(LoginContext);
+  const location = useLocation()
+  const isMounted = useRef(false);
 
 
   const [productdetails, setproductdetails] = useState();
@@ -29,6 +31,8 @@ export default function ProductList(props) {
 
   }, [ContextValue.productname, ContextValue.filterProduct, ContextValue.filterProductByAge])
 
+
+
   const fetchProductData = async () => {
 
 
@@ -46,6 +50,7 @@ export default function ProductList(props) {
 
 
     if (localStorage.getItem('status') === "filterByAge") {
+
       console.log('filter status by age');
 
       let filterdata = JSON.parse(localStorage.getItem('filterProductAge'))

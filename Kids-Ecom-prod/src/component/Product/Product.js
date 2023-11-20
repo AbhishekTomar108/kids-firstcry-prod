@@ -13,12 +13,13 @@ const Product = (props) => {
   useEffect(()=>{
 
     fetchProductData();
+    
 
   },[ContextValue.productname])
 
   const fetchProductData =async()=>{
 
-     let data = await fetch('http://localhost:8000/api/product/products');
+     let data = await fetch('https://kids-e-commerce-backend-prod.onrender.com/api/product/products');
     let parsedData  = await data.json();
 
     if(ContextValue.productname==="all"){

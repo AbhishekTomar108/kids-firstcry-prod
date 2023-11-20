@@ -190,16 +190,16 @@ const Header = () => {
             <div className='top-cotegories hover-product-list y-gap' onMouseOver={()=>showProduct(0) }  onClick={()=>showProductOnClick(0)} >Accessories <img src={downArrow} className='down-arrow'/>
             <div className='accesory-list-container dropdown-product-list' onMouseOver={()=>showProduct(0)}>
                <ul>
-               <Link to='categories'><li onClick={()=>ContextValue.updateproductname("Used Breast Pump")}>Breast Pump</li></Link>
-               <Link to='categories'><li onClick={()=>ContextValue.updateproductname("Baby Bed With Net")}>Baby Bed With Net</li></Link>
-               <Link to='categories'><li onClick={()=>ContextValue.updateproductname("Baby Cradle Automatic Swing")}>Baby Cradle Automatic Swing</li></Link>
-               <Link to='categories'><li onClick={()=>ContextValue.updateproductname("Mothertouch Walker")}>Mothertouch Walker</li></Link>
-               <Link to='categories'><li onClick={()=>ContextValue.updateproductname("Babyhug Car Seat")}>Babyhug Car Seat</li></Link>
-               <Link to='categories'><li onClick={()=>ContextValue.updateproductname("Cradle Swing")}>Cradle Swing</li></Link>
-               <Link to='categories'><li onClick={()=>ContextValue.updateproductname("Electric Baby Swing")}>Electric Baby Swing</li></Link>
-               <Link to='categories'><li onClick={()=>ContextValue.updateproductname("Baby palna")}>Baby palna</li></Link>
-               <Link to='categories'><li onClick={()=>ContextValue.updateproductname("Baby Bouncer and Rocker")}>Baby Bouncer and Rocker</li></Link>
-               <Link to='categories'><li onClick={()=>ContextValue.updateproductname("Baby Booster Chair")}>Baby Booster Chair</li></Link>
+               <Link to='categories'><li onClick={()=>{ContextValue.updateproductname("Used Breast Pump");ContextValue.updateAge("allAge","notAge");ContextValue.updateFullAgeStatus(true)}}>Breast Pump</li></Link>
+               <Link to='categories'><li onClick={()=>{ContextValue.updateproductname("Baby Bed With Net");ContextValue.updateAge("allAge","notAge");ContextValue.updateFullAgeStatus(true)}}>Baby Bed With Net</li></Link>
+               <Link to='categories'><li onClick={()=>{ContextValue.updateproductname("Baby Cradle Automatic Swing");ContextValue.updateAge("allAge","notAge");ContextValue.updateFullAgeStatus(true)}}>Baby Cradle Automatic Swing</li></Link>
+               <Link to='categories'><li onClick={()=>{ContextValue.updateproductname("Mothertouch Walker");ContextValue.updateAge("allAge","notAge");ContextValue.updateFullAgeStatus(true)}}>Mothertouch Walker</li></Link>
+               <Link to='categories'><li onClick={()=>{ContextValue.updateproductname("Babyhug Car Seat");ContextValue.updateAge("allAge","notAge");ContextValue.updateFullAgeStatus(true)}}>Babyhug Car Seat</li></Link>
+               <Link to='categories'><li onClick={()=>{ContextValue.updateproductname("Cradle Swing");ContextValue.updateAge("allAge","notAge");ContextValue.updateFullAgeStatus(true)}}>Cradle Swing</li></Link>
+               <Link to='categories'><li onClick={()=>{ContextValue.updateproductname("Electric Baby Swing");ContextValue.updateAge("allAge","notAge");ContextValue.updateFullAgeStatus(true)}}>Electric Baby Swing</li></Link>
+               <Link to='categories'><li onClick={()=>{ContextValue.updateproductname("Baby palna");ContextValue.updateAge("allAge","notAge");ContextValue.updateFullAgeStatus(true)}}>Baby palna</li></Link>
+               <Link to='categories'><li onClick={()=>{ContextValue.updateproductname("Baby Bouncer and Rocker");ContextValue.updateAge("allAge","notAge");ContextValue.updateFullAgeStatus(true)}}>Baby Bouncer and Rocker</li></Link>
+               <Link to='categories'><li onClick={()=>{ContextValue.updateproductname("Baby Booster Chair");ContextValue.updateAge("allAge","notAge");ContextValue.updateFullAgeStatus(true)}}>Baby Booster Chair</li></Link>
                 </ul> 
             </div>
                
@@ -208,9 +208,9 @@ const Header = () => {
                 <div className='top-age hover-product-list y-gap' onMouseOver={()=>showProduct(1)} onClick={()=>showProductOnClick(1)}>Toys  <img src={downArrow} className='down-arrow'/>
                 <div className='toys-list-container dropdown-product-list' onMouseOver={()=>showProduct(1)}>
                <ul>
-               <Link to='categories'><li onClick={()=>ContextValue.updateproductname("Prongo Educational")}>Prongo	Educational</li></Link>
-               <Link to='categories'><li onClick={()=>ContextValue.updateproductname("Car Bed For Kids")}>Car Bed For Kids</li></Link>
-               <Link to='categories'><li onClick={()=>ContextValue.updateproductname("Baby House Toy")}>Baby House Toy</li></Link>
+               <Link to='categories'><li onClick={()=>{ContextValue.updateproductname("Prongo Educational");ContextValue.updateAge("allAge","notAge");ContextValue.updateFullAgeStatus(true)}}>Prongo	Educational</li></Link>
+               <Link to='categories'><li onClick={()=>{ContextValue.updateproductname("Car Bed For Kids");ContextValue.updateAge("allAge","notAge");ContextValue.updateFullAgeStatus(true)}}>Car Bed For Kids</li></Link>
+               <Link to='categories'><li onClick={()=>{ContextValue.updateproductname("Baby House Toy");ContextValue.updateAge("allAge","notAge");ContextValue.updateFullAgeStatus(true)}}>Baby House Toy</li></Link>
                 </ul> 
             </div>
                 
@@ -218,8 +218,8 @@ const Header = () => {
                 <div className='top-age hover-product-list y-gap' onMouseOver={()=>showProduct(2)} onClick={()=>showProductOnClick(2)}>  Diapers  <img src={downArrow} className='down-arrow'/>
                 <div className='diapers-list-container dropdown-product-list' onMouseOver={()=>showProduct(2)}>
                <ul>
-               <Link to='categories'><li onClick={()=>ContextValue.updateproductname("xxxl Diapers")}>xxxl Diapers</li></Link>
-               <Link to='categories'><li onClick={()=>ContextValue.updateproductname("Mamy Poko Pants xxxl")}>Mamy Poko Pants xxxl</li></Link>
+               <Link to='categories'><li onClick={()=>{ContextValue.updateproductname("xxxl Diapers");ContextValue.updateAge("allAge","notAge");ContextValue.updateFullAgeStatus(true)}}>xxxl Diapers</li></Link>
+               <Link to='categories'><li onClick={()=>{ContextValue.updateproductname("Mamy Poko Pants xxxl");ContextValue.updateAge("allAge","notAge");ContextValue.updateFullAgeStatus(true)}}>Mamy Poko Pants xxxl</li></Link>
                 </ul> 
             </div>
                 </div>
@@ -227,7 +227,7 @@ const Header = () => {
                  <div className='y-gap hover-product-list' onMouseOver={()=>showProduct(3)} onClick={()=>showProductOnClick(3)}>Cot  <img src={downArrow} className='down-arrow'/>
                  <div className='diapers-list-container dropdown-product-list' onMouseOver={()=>showProduct(3)}>
                <ul>
-               <Link to='categories'><li onClick={()=>ContextValue.updateproductname("Wooden Baby Cot")}>Wooden Baby Cot</li></Link>
+               <Link to='categories'><li onClick={()=>{ContextValue.updateproductname("Wooden Baby Cot");ContextValue.updateAge("allAge","notAge");ContextValue.updateFullAgeStatus(true)}}>Wooden Baby Cot</li></Link>
                 
                 </ul> 
             </div>
@@ -235,7 +235,7 @@ const Header = () => {
                 <div className='y-gap hover-product-list' onMouseOver={()=>showProduct(4)} onClick={()=>showProductOnClick(4)}>Jacket  <img src={downArrow} className='down-arrow'/>
                 <div className='diapers-list-container dropdown-product-list' onMouseOver={()=>showProduct(4)}>
                <ul>
-               <Link to='categories'><li onClick={()=>ContextValue.updateproductname("Baby Girl Jacket")}>Baby Girl Jacket</li></Link>
+               <Link to='categories'><li onClick={()=>{ContextValue.updateproductname("Baby Girl Jacket");ContextValue.updateAge("allAge","notAge");ContextValue.updateFullAgeStatus(true)}}>Baby Girl Jacket</li></Link>
                 
                 </ul>
                 </div>
@@ -244,12 +244,12 @@ const Header = () => {
                 <div className='diapers-list-container dropdown-product-list' onMouseOver={()=>showProduct(5)}>
                <ul>
              
-                <Link to='categories'><li onClick={()=>ContextValue.updateproductname("Babyhug Stroller")}>Babyhug Stroller</li></Link>
+                <Link to='categories'><li onClick={()=>{ContextValue.updateproductname("Babyhug Stroller");ContextValue.updateAge("allAge","notAge");ContextValue.updateFullAgeStatus(true)}}>Babyhug Stroller</li></Link>
                 
                 </ul>
                 </div>
                 </div>
-                <div className='y-gap' onClick={()=>ContextValue.updateproductname("all")}><Link to='categories'>Gifts For All Ages</Link></div>
+                <div className='y-gap' onClick={()=>{ContextValue.updateproductname("all");ContextValue.updateAge("allAge","notAge");ContextValue.updateFullAgeStatus(true)}}><Link to='categories'>Gifts For All Ages</Link></div>
                 <div className='y-gap'><Link to={localStorage.getItem('userStatus')==="true"?'/placedproduct':'/account'}>Placed Product</Link></div>
             </div>
 

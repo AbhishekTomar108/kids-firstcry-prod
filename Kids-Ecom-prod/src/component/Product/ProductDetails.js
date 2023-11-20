@@ -147,7 +147,7 @@ const ProductDetails = () => {
     
     
           {/* Breadcrumb Start */}
-          <div className="container-fluid">
+          {/* <div className="container-fluid">
               <div className="row px-xl-5">
                 <div className="col-12">
                   <nav className="breadcrumb bg-light mb-30">
@@ -157,7 +157,7 @@ const ProductDetails = () => {
                   </nav>
                 </div>
               </div>
-            </div>
+            </div> */}
             {/* Breadcrumb End */}
          {/* Shop Detail Start */}
          <div className="container-fluid pb-5">
@@ -223,7 +223,7 @@ const ProductDetails = () => {
                     <button className="btn btn-primary px-3" onClick={submitUserProductCart}><i className="fa fa-shopping-cart mr-1" /> <Link to={localStorage.getItem('userStatus')==='true'?'/productcart':'/account'}> Add To
                       Cart </Link></button>
                   </div>
-                  <div className="d-flex pt-2">
+                  {/* <div className="d-flex pt-2">
                     <strong className="text-dark mr-2">Share on:</strong>
                     <div className="d-inline-flex">
                       <a className="text-dark px-2" href>
@@ -239,7 +239,7 @@ const ProductDetails = () => {
                         <i className="fab fa-pinterest" />
                       </a>
                     </div>
-                  </div>
+                  </div> */}
                   <div className="row mt-5">
               <div className="col">
                 <div className="bg-light">
