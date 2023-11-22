@@ -69,6 +69,7 @@ const PlacedProduct = () => {
                   <th>Total</th>
                   <th>Order Placed</th>
                   <th>Delivery Date</th>
+                  <th>Reference ID</th>
                 </tr>
               </thead>
               <tbody className="align-middle">
@@ -87,6 +88,7 @@ const PlacedProduct = () => {
                   <td className="align-middle">{(data.productPrice*data.totalItem).toFixed(2)}</td>
                   <td className="align-middle">{new Date(data.date).toLocaleDateString()}</td>
                   <td className="align-middle">{data.deliveryDate}</td>
+                  <td className="align-middle">{data.referenceId}</td>
                 </tr>
                   )
                 }) }

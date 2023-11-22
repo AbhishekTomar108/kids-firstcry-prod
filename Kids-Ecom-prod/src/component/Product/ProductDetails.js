@@ -373,7 +373,7 @@ const ProductDetails = () => {
               <div className="col">
                 <div className="Car you-may-also-like related-carousel">
                 {sameProduct && sameProduct.length !== 0 ? sameProduct.slice(0,3).map((data, index) => {
-const truncatedProductName = data.productname.slice(0, 30);
+                  const truncatedProductName = data.productname.slice(0, 30);
             return (
               <div className="card" key={index}>
                   <Link to={localStorage.getItem('userStatus')==='true'?'/productdetails':'/account'} onClick={() => { localStorage.setItem('productData', JSON.stringify(data))}}> 

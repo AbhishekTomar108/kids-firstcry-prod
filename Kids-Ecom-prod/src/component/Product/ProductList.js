@@ -335,7 +335,7 @@ export default function ProductList(props) {
                       </Link>
                     </button>
                   </div>
-                  <div className="d-flex pt-2 my-2 share-thumb">
+                  {/* <div className="d-flex pt-2 my-2 share-thumb">
                     <strong className="text-dark mr-2">Share on:</strong>
                     <div className="d-inline-flex">
                       <a className="text-dark px-2" href>
@@ -351,7 +351,7 @@ export default function ProductList(props) {
                         <i className="fab fa-pinterest" />
                       </a>
                     </div>
-                  </div>
+                  </div> */}
 
                   <div className='brand-type'>
               {currentProduct  &&  
@@ -367,7 +367,7 @@ export default function ProductList(props) {
         </div>
 
         <div className="text">
-          <h1 style={{ fontSize: "30px" }}>{ContextValue.productname==="all"?"Gifts For All Ages":ContextValue.productname==="Used Breast Pump"?"Breast Pump":ContextValue.productname} Collection</h1>
+         {localStorage.getItem('status') === "filterdata"?<h1 style={{ fontSize: "30px" }}>Result Based on  {`'${ContextValue.searchQuery}'`} Query </h1> :<h1 style={{ fontSize: "30px" }}>{ContextValue.productname==="all"?"Gifts For All Ages":ContextValue.productname==="Used Breast Pump"?"Breast Pump":ContextValue.productname} Collection</h1>}
           <hr></hr>
 
           <p style={{ textAlign: "center" }}>
@@ -456,6 +456,7 @@ export default function ProductList(props) {
                         "productImage",
                         data.image
                       );
+                      localStorage.setItem('productData', JSON.stringify(data))
                       setquickViewStatus(true);
                       setCurrentProduct(data)
                     }}

@@ -526,7 +526,7 @@ font-style: italic;
 
 .add-to-cart-dropdown-container{
     position: absolute;
-    top: 35%;
+    top: 30%;
     left: 30%;
     display: flex;
     flex-direction: column;
@@ -1455,10 +1455,10 @@ button{
 
 
 @media screen and (max-width: 1370px) and (min-width:900px) {
-    .product-dropdwon{
+    /* .product-dropdwon{
         left: 25% !important;
         top:  15% !important;
-    }
+    } */
   }
 
 ::-webkit-scrollbar-thumb {

@@ -14,6 +14,7 @@ const Header = () => {
     const [previousIndex, setpreviousIndex] = useState(0);
     const [searchitem, setSearchItem] = useState('')
     const [filterData, setfilterData]  = useState();
+    const [filterStatus, setFilterStatus] = useState(true)
 
     useEffect(()=>{
 
@@ -22,6 +23,8 @@ const Header = () => {
     fetch(`http://localhost:8000/api/product/products/`).then(res=>res.json()).then(data=> {const filteredDtata = data.filter(element=>{ return (element.productname.toLowerCase().includes(searchitem,0) || element.category.toLowerCase().includes(searchitem,0))})
     
     setfilterData(filteredDtata)
+    ContextValue.updateSearchQuery(searchitem)
+    setFilterStatus(true)
     localStorage.setItem('filterproductData', JSON.stringify(filteredDtata));       
   
 })
@@ -121,6 +124,19 @@ const Header = () => {
         headerContainer.style.flexDirection = "row"
     }
 
+    const selectQuery = ()=>{
+
+        console.log("select query")
+        ContextValue.updateFilterProduct(true);
+        setfilterData(null);
+        setFilterStatus(false)
+        setSearchItem("");
+        ContextValue.updateAge("allAge","notAge");
+        ContextValue.updateFullAgeStatus(true)
+        // document.querySelector('.search_result').style.display = "none"
+        
+    }
+
   return (
     <div className='header'>
         <div className='header-container'>
@@ -154,15 +170,20 @@ const Header = () => {
                 {/* </div> */}
             </div>
             <div className='search_result' >
-           {filterData && filterData.map((data,index)=>{
+           {filterStatus && 
+           (filterData && filterData.map((data,index)=>{
             return (
                     
-                <Link to='categories' onClick={()=>{ContextValue.updateFilterProduct(true);setfilterData(null)}}><a target='_blank' className='search_suggestion_line' key={index}>
+                // <Link to='categories' onClick={()=>{ContextValue.updateFilterProduct(true);setfilterData(null)}}><a target='_blank' className='search_suggestion_line' key={index}>
+                //     {data.productname}
+                // </a></Link>
+                <Link to='categories' onClick={()=>selectQuery()}><a target='_blank' className='search_suggestion_line' key={index}>
                     {data.productname}
                 </a></Link>
          
             )
-           }) }
+           }) )
+           }
               </div>
         </section>
             </div>

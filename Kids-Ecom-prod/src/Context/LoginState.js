@@ -14,6 +14,7 @@ const LoginState = (props) => {
     const [category, setcategory] = useState(false);
     const [age, setAge] = useState("");
     const [allAgeStatus, setAllAgeStatus] = useState(true);
+    const [searchQuery, setSearchQuery] = useState()
 
 
 
@@ -23,6 +24,10 @@ const LoginState = (props) => {
     setfilterProduct(value)
     localStorage.setItem('status',"filterdata")
 
+  }
+
+  const updateSearchQuery = (value)=>{
+    setSearchQuery(value)
   }
 
   const updateFullAgeStatus = (value)=>{
@@ -92,7 +97,7 @@ const LoginState = (props) => {
   }
 
   return (
-    <LoginContext.Provider value={{user, updateUser, productname, updateproductname, fetchuserDetails, filterProduct, updateFilterProduct, category, updateCategory, updateAge, updateFilterProductByAge,filterProductByAge,age,allAgeStatus,updateFullAgeStatus}}>
+    <LoginContext.Provider value={{user, updateUser, productname, updateproductname, fetchuserDetails, filterProduct, updateFilterProduct, category, updateCategory, updateAge, updateFilterProductByAge,filterProductByAge,age,allAgeStatus,updateFullAgeStatus,updateSearchQuery,searchQuery}}>
     {props.children}
 </LoginContext.Provider>
   )

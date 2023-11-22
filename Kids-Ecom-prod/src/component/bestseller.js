@@ -17,6 +17,8 @@ import ProductCart from "./Product/ProductCart";
 const Bestseller = () => {
   const [bestSellerData, setbestSellerData] = useState();
   const [quickViewStatus, setquickViewStatus] = useState(false);
+  const fifeArray = [0,1,2,3,4]
+
   useEffect(() => {
     fetchProductData();
   }, []);
@@ -127,14 +129,16 @@ const Bestseller = () => {
                   </h3>
                   {console.log(localStorage.getItem("productName"))}
                   <div className="d-flex mb-3">
-                    <div className="text-primary mr-2">
-                      <small className="fas fa-star star-2" />
-                      <small className="fas fa-star star-2" />
-                      <small className="fas fa-star star-2" />
-                      <small className="fas fa-star-half-alt star-2" />
-                      <small className="far fa-star star-2" />
+                  <div className="text-primary mr-2">
+
+                    {JSON.parse(localStorage.getItem('productData')) && fifeArray.map((element,index)=>{
+                                return(
+                                  <i className={`${index<JSON.parse(localStorage.getItem('productData')).rating.rate?"fas":"far"} fa-star star-2`} />
+                                )
+                              })}
+                     
                     </div>
-                    <small className="pt-1">(99 Reviews)</small>
+                    <small className="pt-1">{JSON.parse(localStorage.getItem('productData')).rating.count} Review</small>
                   </div>
                   <h3
                     style={{ textAlign: "initial" }}
@@ -143,56 +147,6 @@ const Bestseller = () => {
                     Price : {localStorage.getItem("productPrice")} &#x20B9;
                   </h3>
                   
-                  {/* <div className="d-flex mb-3">
-                    <strong className="text-dark mr-3 strong-text">Sizes:</strong>
-                    <form>
-                      <div className="custom-control custom-radio custom-control-inline">
-                        <input type="radio" className="custom-control-input" id="size-1" name="size" />
-                        <label className="custom-control-label" htmlFor="size-1">XS</label>
-                      </div>
-                      <div className="custom-control custom-radio custom-control-inline">
-                        <input type="radio" className="custom-control-input" id="size-2" name="size" />
-                        <label className="custom-control-label" htmlFor="size-2">S</label>
-                      </div>
-                      <div className="custom-control custom-radio custom-control-inline">
-                        <input type="radio" className="custom-control-input" id="size-3" name="size" />
-                        <label className="custom-control-label" htmlFor="size-3">M</label>
-                      </div>
-                      <div className="custom-control custom-radio custom-control-inline">
-                        <input type="radio" className="custom-control-input" id="size-4" name="size" />
-                        <label className="custom-control-label" htmlFor="size-4">L</label>
-                      </div>
-                      <div className="custom-control custom-radio custom-control-inline">
-                        <input type="radio" className="custom-control-input" id="size-5" name="size" />
-                        <label className="custom-control-label" htmlFor="size-5">XL</label>
-                      </div>
-                    </form>
-                  </div> */}
-                  {/* <div className="d-flex mb-4">
-                    <strong className="text-dark mr-3 strong-text">Colors:</strong>
-                    <form>
-                      <div className="custom-control custom-radio custom-control-inline">
-                        <input type="radio" className="custom-control-input" id="color-1" name="color" />
-                        <label className="custom-control-label" htmlFor="color-1">Black</label>
-                      </div>
-                      <div className="custom-control custom-radio custom-control-inline">
-                        <input type="radio" className="custom-control-input" id="color-2" name="color" />
-                        <label className="custom-control-label" htmlFor="color-2">White</label>
-                      </div>
-                      <div className="custom-control custom-radio custom-control-inline">
-                        <input type="radio" className="custom-control-input" id="color-3" name="color" />
-                        <label className="custom-control-label" htmlFor="color-3">Red</label>
-                      </div>
-                      <div className="custom-control custom-radio custom-control-inline">
-                        <input type="radio" className="custom-control-input" id="color-4" name="color" />
-                        <label className="custom-control-label" htmlFor="color-4">Blue</label>
-                      </div>
-                      <div className="custom-control custom-radio custom-control-inline">
-                        <input type="radio" className="custom-control-input" id="color-5" name="color" />
-                        <label className="custom-control-label" htmlFor="color-5">Green</label>
-                      </div>
-                    </form>
-                  </div> */}
                   <div className="d-flex align-items-center mb-4 pt-2">
                     {/* <div className="input-group quantity mr-3" style={{width: '158px', alignItems:'center'}}>
                       <div className="input-group-btn">
@@ -218,7 +172,7 @@ const Bestseller = () => {
                       </Link>
                     </button>
                   </div>
-                  <div className="d-flex pt-2 share-thumb">
+                  {/* <div className="d-flex pt-2 share-thumb">
                     <strong className="text-dark mr-2">Share on:</strong>
                     <div className="d-inline-flex">
                       <a className="text-dark px-2" href>
@@ -234,7 +188,16 @@ const Bestseller = () => {
                         <i className="fab fa-pinterest" />
                       </a>
                     </div>
-                  </div>
+                  </div> */}
+
+<div className='brand-type'>
+              
+              <>
+               <strong className="brand-type">Brand</strong> : <span className="brand-type">NA</span>
+               <strong className="brand-type">Type</strong> : <span className="brand-type">NA</span>
+               </>
+                      </div>
+
                 </div>
               </div>
             </div>
@@ -266,6 +229,7 @@ const Bestseller = () => {
                       <div className="carousel-item active">
                         <div className="row">
                           {bestSellerData.slice(0, 4).map((data, index) => {
+                            const truncatedProductName = data.productname.slice(0, 30);
                             console.log("data =", data);
                             return (
                               <div className="col-md-4 mb-3">
@@ -297,6 +261,7 @@ const Bestseller = () => {
                                             "productImage",
                                             data.image
                                           );
+                                          localStorage.setItem('productData', JSON.stringify(data))
                                           setquickViewStatus(true);
                                         }}
                                       >
@@ -331,7 +296,7 @@ const Bestseller = () => {
 
 
                                   <span className="card-title">
-                                    {data.productname}({data.age}years)
+                                    {truncatedProductName}({data.age}years)
                                   </span>
                                   
                                     <div className="review-section">
@@ -368,6 +333,8 @@ const Bestseller = () => {
                       <div className="carousel-item">
                         <div className="row">
                           {bestSellerData.slice(5, 9).map((data, index) => {
+                            const truncatedProductName = data.productname.slice(0, 30);
+                            
                             console.log("data =", data);
                             return (
                               <div className="col-md-4 mb-3">
@@ -399,6 +366,8 @@ const Bestseller = () => {
                                             "productImage",
                                             data.image
                                           );
+                                          localStorage.setItem('productData', JSON.stringify(data))
+
                                           setquickViewStatus(true);
                                         }}
                                       >
@@ -419,6 +388,8 @@ const Bestseller = () => {
                                             "productImage",
                                             data.image
                                           );
+                                          localStorage.setItem('productData', JSON.stringify(data))
+
                                         }}
                                       >
                                         <button className="quick-add-to-btn">
@@ -430,7 +401,7 @@ const Bestseller = () => {
 
                                   <div className="card-body">
                                     <span className="card-title">
-                                      {data.productname} ({data.age}years)
+                                      {truncatedProductName} ({data.age}years)
                                     </span>
 
                                     <div className="review-section">
@@ -467,6 +438,7 @@ const Bestseller = () => {
                       <div className="carousel-item">
                         <div className="row">
                           {bestSellerData.slice(0, 4).map((data, index) => {
+                            const truncatedProductName = data.productname.slice(0, 30);
                             console.log("data =", data);
                             return (
                               <div className="col-md-4 mb-3">
@@ -498,6 +470,8 @@ const Bestseller = () => {
                                             "productImage",
                                             data.image
                                           );
+                                          localStorage.setItem('productData', JSON.stringify(data))
+
                                           setquickViewStatus(true);
                                         }}
                                       >
@@ -518,6 +492,8 @@ const Bestseller = () => {
                                             "productImage",
                                             data.image
                                           );
+                                          localStorage.setItem('productData', JSON.stringify(data))
+
                                         }}
                                       >
                                         <button className="quick-add-to-btn">
@@ -529,7 +505,7 @@ const Bestseller = () => {
 
                                   <div className="card-body">
                                     <span className="card-title">
-                                      {data.productname} ({data.age}years)
+                                      {truncatedProductName} ({data.age}years)
                                     </span>
 
                                     <div className="review-section">
